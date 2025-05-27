@@ -8,6 +8,7 @@ const SignUp = ({setIsLogIn}: {setIsLogIn: (val: boolean) => void}) => {
 
   const handleSignupPress = async () => {
     await setItem(email, password);
+    await setItem('isLoggedIn', 'true');
     setIsLogIn(true);
   };
 
