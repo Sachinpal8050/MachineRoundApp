@@ -60,5 +60,7 @@ const style = StyleSheet.create({
     borderRadius: 10,
     alignSelf: 'flex-start',
     maxWidth: '80%',
+    borderWidth: 1,
+    borderColor: 'gray',
   },
 });
