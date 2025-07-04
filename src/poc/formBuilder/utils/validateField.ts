@@ -27,3 +27,13 @@ export function validateField(field: any, value: any) {
 
   return error;
 }
+
+export function setServerErrors(
+  errorMap: Record<string, string>,
+  setErrors: Function,
+) {
+  setErrors(prev => ({
+    ...prev, // keep existing client-side errors
+    ...errorMap, // overwrite/add server-side errors
+  }));
+}

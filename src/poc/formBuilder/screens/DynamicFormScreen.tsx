@@ -1,7 +1,7 @@
 // screens/DynamicFormScreen.tsx
 import React, {useState} from 'react';
 import FormBuilder from '../components/FormBuilder';
-import {validateField} from '../utils/validateField';
+import {setServerErrors, validateField} from '../utils/validateField';
 import {Button} from 'react-native';
 import {SCHEMA} from '../../dummyJson';
 
@@ -34,6 +34,24 @@ export default function DynamicFormScreen() {
       // Submit the form
       console.log('Submitted:', formState);
     }
+
+    let error = {
+      errors: {
+        email: 'Email already exists',
+        aadhaar: 'Invalid Aadhaar number',
+      },
+    };
+
+    // getting errors from server
+    let p = new Promise((resolve, reject) => {
+      setTimeout(reject, 3000);
+    });
+
+    p.then(() => {
+      setServerErrors(error.errors, setErrors);
+    }).catch(() => {
+      setServerErrors(error.errors, setErrors);
+    });
   };
 
   const onBlur = (field: any) => {
