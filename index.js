@@ -7,5 +7,6 @@ import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
 import Round4 from './src/round4/index';
 import DynamicFormScreen from './src/poc/formBuilder/screens/DynamicFormScreen';
+import FileExploer from './src/poc/fileExploer/index';
 
-AppRegistry.registerComponent(appName, () => DynamicFormScreen);
+AppRegistry.registerComponent(appName, () => FileExploer);
