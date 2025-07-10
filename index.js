@@ -9,6 +9,7 @@ import Round4 from './src/round4/index';
 import DynamicFormScreen from './src/poc/formBuilder/screens/DynamicFormScreen';
 import FileExploer from './src/poc/fileExploer/index';
 import TicTaiToe from './src/poc/ticTaiToe/index';
-import Round5 from './src/round5/index'
+import Round6 from './src/round6/index'
 
-AppRegistry.registerComponent(appName, () => Round5);
+
+AppRegistry.registerComponent(appName, () => Round6);
