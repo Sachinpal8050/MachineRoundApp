@@ -11,5 +11,6 @@ import FileExploer from './src/poc/fileExploer/index';
 import TicTaiToe from './src/poc/ticTaiToe/index';
 import UpdateCound from './src/poc/updateAnimatedCount/index';
 import Round8 from './src/round8/index';
+import AnimatedCarousel from './src/poc/animatedCarousel/index';
 
-AppRegistry.registerComponent(appName, () => Round8);
+AppRegistry.registerComponent(appName, () => AnimatedCarousel);
