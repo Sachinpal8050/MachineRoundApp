@@ -10,5 +10,6 @@ import DynamicFormScreen from './src/poc/formBuilder/screens/DynamicFormScreen';
 import FileExploer from './src/poc/fileExploer/index';
 import TicTaiToe from './src/poc/ticTaiToe/index';
 import UpdateCound from './src/poc/updateAnimatedCount/index';
+import Round8 from './src/round8/index';
 
-AppRegistry.registerComponent(appName, () => UpdateCound);
+AppRegistry.registerComponent(appName, () => Round8);
