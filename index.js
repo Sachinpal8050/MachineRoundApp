@@ -12,5 +12,6 @@ import TicTaiToe from './src/poc/ticTaiToe/index';
 import UpdateCound from './src/poc/updateAnimatedCount/index';
 import Round8 from './src/round8/index';
 import AnimatedCarousel from './src/poc/animatedCarousel/index';
+import AnimatedTextLoop from './src/poc/animatedText/index';
 
-AppRegistry.registerComponent(appName, () => AnimatedCarousel);
+AppRegistry.registerComponent(appName, () => AnimatedTextLoop);
