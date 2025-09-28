@@ -10,8 +10,8 @@ import DynamicFormScreen from './src/poc/formBuilder/screens/DynamicFormScreen';
 import FileExploer from './src/poc/fileExploer/index';
 import TicTaiToe from './src/poc/ticTaiToe/index';
 import UpdateCound from './src/poc/updateAnimatedCount/index';
-import Round8 from './src/round8/index';
+import InfiniteCarousel from './src/poc/infiniteCarousel/index';
 import AnimatedCarousel from './src/poc/animatedCarousel/index';
 import AnimatedTextLoop from './src/poc/animatedText/index';
 
-AppRegistry.registerComponent(appName, () => AnimatedTextLoop);
+AppRegistry.registerComponent(appName, () => InfiniteCarousel);
