@@ -1,7 +1,7 @@
 // ── config ────────────────────────────────────────────────────────
 // Change this to your server IP when running on a physical device
 // e.g. 'http://192.168.1.42:3000'
-export const BASE_URL = 'http://192.168.1.7:3000';
+export const BASE_URL = 'http://open-alarm-sanction.ngrok-free.dev';
 
 // ── chat ──────────────────────────────────────────────────────────
 
