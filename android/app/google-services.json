@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "637195399243",
+    "project_id": "machineround-cf6a2",
+    "storage_bucket": "machineround-cf6a2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637195399243:android:0fe3f3351e7a61bf575dce",
+        "android_client_info": {
+          "package_name": "com.machineroundapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4Gsx_sA4BWm8wmz-Ea39BfR1eQNCW4qA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

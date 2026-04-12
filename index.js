@@ -13,6 +13,7 @@ import UpdateCound from './src/poc/updateAnimatedCount/index';
 import InfiniteCarousel from './src/poc/infiniteCarousel/index';
 import AnimatedCarousel from './src/poc/animatedCarousel/index';
 import AnimatedTextLoop from './src/poc/animatedText/index';
+import SpokeApp from './src/spoke-app';
 // import MatrixColorGame from './src/fun/matrixColorGame/index';
 
-AppRegistry.registerComponent(appName, () => Round4);
+AppRegistry.registerComponent(appName, () => SpokeApp);
