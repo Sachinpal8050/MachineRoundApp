@@ -1,7 +1,13 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
-     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
 
     <application
       android:name=".MainApplication"
@@ -23,5 +29,25 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+        <service
+            android:name=".MyFirebaseService"
+            android:exported="false"
+            android:directBootAware="true"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".AlarmActivity"
+            android:exported="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"
+            tools:targetApi="o_mr1" />
+
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="true" />
     </application>
 </manifest>
