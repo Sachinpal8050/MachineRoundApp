@@ -98,8 +98,8 @@ export default function usePushNotifications() {
 
     // foreground notifications (app is open)
     const unsubForeground = messaging().onMessage(async remoteMessage => {
-      const {title, body} = remoteMessage.notification ?? {};
-      Alert.alert(title ?? 'Reminder', body ?? '');
+      // const {title, body} = remoteMessage.notification ?? {};
+      // Alert.alert(title ?? 'Reminder', body ?? '');
     });
 
     // user tapped notification while app was in background

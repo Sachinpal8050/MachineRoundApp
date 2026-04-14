@@ -3,40 +3,108 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="#0B0B12"
     android:orientation="vertical"
-    android:background="#1A1A2E">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Main Card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#111827"
+        android:padding="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="6dp">
+
+        <!-- Top Indicator -->
+        <View
+            android:layout_width="80dp"
+            android:layout_height="4dp"
+            android:background="#F59E0B"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Ring -->
+        <View
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:background="@drawable/circle_ring"
+            android:layout_gravity="center" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:letterSpacing="0.02" />
+
+        <!-- Body -->
+        <TextView
+            android:id="@+id/tvBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#6B7280"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Time -->
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:textColor="#F59E0B"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:fontFamily="monospace" />
+
+    </LinearLayout>
+
+    <!-- Bottom Actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="⏰"
-        android:textSize="80sp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:weightSum="2">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Alarm Ringing!"
-        android:textSize="32sp"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="16dp" />
+        <!-- Snooze -->
+        <Button
+            android:id="@+id/btnSnooze"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Snooze 5m"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#F59E0B"
+            android:background="@drawable/bg_button_outline"
+            android:layout_marginEnd="8dp" />
 
-    <TextView
-        android:id="@+id/tvTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="56sp"
-        android:textColor="#E94560"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp" />
+        <!-- Dismiss -->
+        <Button
+            android:id="@+id/btnDismiss"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Dismiss"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/bg_button_primary"
+            android:layout_marginStart="8dp" />
 
-    <Button
-        android:id="@+id/btnDismiss"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="48dp"
-        android:text="Dismiss"
-        android:textSize="18sp"
-        android:backgroundTint="#E94560" />
+    </LinearLayout>
 
 </LinearLayout>

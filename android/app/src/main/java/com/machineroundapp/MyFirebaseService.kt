@@ -15,15 +15,20 @@ class MyFirebaseService : FirebaseMessagingService() {
         super.onMessageReceived(message)
         Log.d("FCM", "Message received — scheduling alarm in 2 seconds")
 
+        val title = message.data["title"] ?: "Alarm"
+        val body = message.data["body"] ?: "You have an alarm"
         // Schedule alarm 2 seconds from now
-        scheduleAlarm(this)
+        scheduleAlarm(this, title, body)
     }
 
-    private fun scheduleAlarm(context: Context) {
+    private fun scheduleAlarm(context: Context, title: String, body: String) {
         val alarmManager = context.getSystemService(AlarmManager::class.java)
-        val triggerTime = System.currentTimeMillis() + 2000 // 2 seconds
+        val triggerTime = System.currentTimeMillis() + 10 // 2 seconds
 
-        val intent = Intent(context, AlarmReceiver::class.java)
+        val intent = Intent(context, AlarmReceiver::class.java).apply {
+            putExtra("title", title)  // ← pass here
+            putExtra("body", body)    // ← pass here
+        }
         val pendingIntent = PendingIntent.getBroadcast(
             context, 0, intent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
